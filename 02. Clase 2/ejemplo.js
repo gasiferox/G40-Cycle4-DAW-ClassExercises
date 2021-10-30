@@ -31,6 +31,7 @@ window.onload = function()
 
         areaGenerada.innerHTML = "for( let x = " + document.getElementById("inicio").value + " ; x <=  " + document.getElementById("final").value + "; x++ ) {\n" + " console.log( '-' + x );\n" + "}\n\n"
 
+        areaGenerada2.innerHTML="";
         for(let y = document.getElementById("inicio").value; y <= document.getElementById("final").value; y++) {
             /* console.log(x) */
             areaGenerada2.innerHTML += y + "\n";
