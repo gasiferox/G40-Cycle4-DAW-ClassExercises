@@ -6,25 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="ejemplo3.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Ejercicios Clase 3 - 29OCT21</title>
 </head>
 
 <body>
 
-    <div>
-        <select name="paises" id="paises">
+    <h1>Ejercicio con Comboboxes</h1>
 
-            <option value="0" disabled selected>Seleccione su país</option>
+    <div id="combo">
+        <select class="custom-select" name="paises" id="paises">
+
+            <option value="0" disabled selected class="boldoption">Seleccione su país</option>
             <option value="1">Colombia</option>
             <option value="2">Venezuela</option>
-            <option value="3">Estados Unidos</option>
+            <option value="3" class="boldoption">Estados Unidos</option>
         </select>
     </div>
 
-    <br>
+    <!-- <br> -->
 
-    <div>
-        <select name="ciudades" id="ciudades">
+    <div id="combo">
+        <select class="custom-select" name="ciudades" id="ciudades">
 
             <option value="0" selected>Selecciona la ciudad</option>
             <option value="1"></option>
@@ -33,6 +36,24 @@
             <option value="4"></option>
         </select>
     </div>
+
+    <!-- <br> -->
+
+    <div id="combo">
+        <select class="custom-select" name="estados" id="estados">
+
+            <option value="0" selected>Selecciona el estado</option>
+            <option value="1"></option>
+            <option value="2"></option>
+            <option value="3"></option>
+            <option value="4"></option>
+        </select>
+    </div>
+
+    <div id="bandera">
+        <!-- <img id="bandera" src="" alt=""> -->
+    </div>
+
 
 </body>
 
