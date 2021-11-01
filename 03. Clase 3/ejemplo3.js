@@ -5,14 +5,31 @@ window.onload = function () {
 
         var seleccionado = paises.options[paises.selectedIndex].text;
 
-        /* alert(seleccionado); */
+        /* document.body.style.background = 'url("https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg")'; */
 
-        getCiudades(seleccionado);
+
+        /* alert(seleccionado); */
 
         getEstados(seleccionado);
 
+        getCiudades(seleccionado);
+
         getBandera(seleccionado)
     })
+
+    function getEstados(seleccionado) {
+        var arrayEstados = [];
+        if (seleccionado == "Colombia")
+            arrayEstados = ["Cundinamarca", "Boyacá", "Nariño", "Risaralda", "Quindio"];
+        if (seleccionado == "Venezuela")
+            arrayEstados = ["Carabobo", "Anzoategui", "Zulia", "Apure", "Mérida"];
+        if (seleccionado == "Estados Unidos")
+            arrayEstados = ["Florida", "Nevada", "Iowa", "Kentuky", "Colorado"]
+
+        var estados = document.getElementById("estados");
+        for (i = 0; i < arrayEstados.length; i++)
+            estados.options[i+1].text = arrayEstados[i];
+    }
 
     function getCiudades(seleccionado) {
         var arrayCiudades = [];
@@ -26,20 +43,6 @@ window.onload = function () {
         var ciudades = document.getElementById("ciudades");
         for (i = 0; i < arrayCiudades.length; i++)
             ciudades.options[i].text = arrayCiudades[i];
-    }
-
-    function getEstados(seleccionado) {
-        var arrayEstados = [];
-        if (seleccionado == "Colombia")
-            arrayEstados = ["Cundinamarca", "Boyacá", "Nariño", "Risaralda", "Quindio"];
-        if (seleccionado == "Venezuela")
-            arrayEstados = ["Carabobo", "Anzoategui", "Zulia", "Apure", "Mérida"];
-        if (seleccionado == "Estados Unidos")
-            arrayEstados = ["Florida", "Nevada", "Iowa", "Kentuky", "Colorado"]
-
-        var estados = document.getElementById("estados");
-        for (i = 0; i < arrayEstados.length; i++)
-            estados.options[i].text = arrayEstados[i];
     }
 
     function getBandera(seleccionado) {
