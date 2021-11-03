@@ -1,0 +1,83 @@
+:root {
+    --color-1: #1DB954;
+    --color-2: #323232;
+    --color-3: #000000;
+    --color-4: #FFFFFF;
+    --color-5: #181818;
+    --color-6: dodgerblue;
+    --color-7: red;
+    --font-size-1: 1rem;
+    --font-size-2: 1.2rem;
+    --font-size-3: 1.8rem;
+    --shadow-1: rgb(0 0 0 / 35%) 0% 8% 24%;
+    --shadow-2: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --border-radius-1: .25rem;
+    --border-radius-2: .5rem;
+    --font-family-1: 'poppins', sans-serif;
+    --animation-1: 200ms;
+}
+
+html, body {
+    margin: 0%;
+    padding: 0px;
+    background-color: var(--color-3);
+    font-family: var(--font-family-1);
+    font-size: var(--font-size-1);
+    color: var(--color-4);
+    text-align: center;
+    background-image: url("https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg");
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+h1 {
+    color: green;
+}
+
+#combo {
+    align-content: center;
+    padding-bottom: 20px;
+}
+
+.custom-select {
+    width: auto;
+    position: relative;
+    background-color: var(--color-4);
+    color: var(--color-2);
+    border-radius: var(--border-radius-2);
+    font-size: var(--font-size-2);
+    text-shadow: var(--shadow-1);
+    padding: 10px;
+}
+
+.boldoption {
+    font-weight: bold;
+}
+
+#bandera {
+    padding-top: 20px;
+}
+
+#cedula {
+    width: auto;
+    position: relative;
+    background-color: var(--color-4);
+    color: var(--color-2);
+    border-radius: var(--border-radius-2);
+    font-size: var(--font-size-1);
+    text-shadow: var(--shadow-1);
+    padding: 10px;
+}
+
+#employeed {
+    width: auto;
+    position: relative;
+    padding: 10px;
+}
+
+#verificacionCedula {
+    font-size: var(--font-size-1);
+    color: var(--color-7);
+}

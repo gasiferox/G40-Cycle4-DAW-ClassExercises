@@ -15,6 +15,8 @@ window.onload = function () {
         /* getCiudades(seleccionado); */
 
         getBandera(seleccionado)
+
+        validarCelular()
     })
 
     function getEstados(seleccionado) {
@@ -28,22 +30,8 @@ window.onload = function () {
 
         var estados = document.getElementById("estados");
         for (i = 0; i < arrayEstados.length; i++)
-            estados.options[i+1].text = arrayEstados[i];
+            estados.options[i + 1].text = arrayEstados[i];
     }
-
-    /* function getCiudades(seleccionado) {
-        var arrayCiudades = [];
-        if (seleccionado == "Colombia")
-            arrayCiudades = ["Bogotá", "Medellin", "Cali", "Cartagena", "Pereira"];
-        if (seleccionado == "Venezuela")
-            arrayCiudades = ["Caracas", "Valencia", "Maracaibo", "Anaco", "Ciudad Ojeda"];
-        if (seleccionado == "Estados Unidos")
-            arrayCiudades = ["Miami", "New York", "Tampa", "New Jersey", "San Francisco"];
-
-        var ciudades = document.getElementById("ciudades");
-        for (i = 0; i < arrayCiudades.length; i++)
-            ciudades.options[i].text = arrayCiudades[i];
-    } */
 
     document.getElementById("estados").addEventListener("change", () => {
         var estados = document.getElementById("estados");
@@ -55,8 +43,7 @@ window.onload = function () {
         getCiudades(estadoSel);
     })
 
-    function getCiudades(estadoSel)
-    {
+    function getCiudades(estadoSel) {
         var arrayCiudades = [];
         /* Colombia */
         if (estadoSel == "Cundinamarca") {
@@ -128,7 +115,7 @@ window.onload = function () {
 
         var ciudades = document.getElementById("ciudades");
         for (i = 0; i < arrayCiudades.length; i++) {
-            ciudades.options[i+1].text = arrayCiudades[i];
+            ciudades.options[i + 1].text = arrayCiudades[i];
         }
 
     }
@@ -148,4 +135,42 @@ window.onload = function () {
             bandera.innerHTML = '<img src="' + src + '" alt="">';
         }
     }
+
+    document.getElementById("submit").addEventListener("click", () => {
+        var cedula = document.getElementById("cedula").value;
+
+        if (cedula.length == 0) {
+            var verificacionCedula = document.getElementById("verificacionCedula");
+            verificacionCedula.innerHTML = "El campo no puede estar vacio"
+            /* alert("El campo no puede ir vacío"); */
+        }
+        else {
+            /* verificacionCedula.innerHTML = "" */
+            console.log("El valor de la cedula es " + cedula);
+        }
+    })
+
+    document.getElementById("employeed").addEventListener("change", e => {
+        if (e.target.checked) {
+            console.log("Esta empleado")
+        } else {
+            console.log("No esta empleado")
+        }
+    })
+
+    document.getElementById("submit2").addEventListener("click", () => {
+        var celular = document.getElementById("celular").value
+        var expression = /^[0-9]{3,5}$/  /* Expresión regular que toma solo numeros y minimo 3 maximo 5 */
+        var letras = /[a-z]/
+
+        if (expression.test(celular)) {
+            alert("El celular es " + celular)
+        } if (celular == ""){
+            alert("Ingrese valores al campo")
+        } if (letras.test(celular)) {
+            alert ("ingrese valores numéricos")
+        }
+    })
+
+
 }
