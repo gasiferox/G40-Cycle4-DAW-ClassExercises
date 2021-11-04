@@ -16,8 +16,10 @@ const HTML_CONTENT_TYPE = 'text/html'
 
 //obtener resp
 app.get('/', (req, res) => {
+
     res.writeHead(200, {'Content-Type': HTML_CONTENT_TYPE})
 
+    // Se envía el archivo html al server mediante un response
     createReadStream('Clase_5/clase5.html').pipe(res);
 
     /* res.end('Mensaje del servidor') */
@@ -25,17 +27,19 @@ app.get('/', (req, res) => {
 
 let objMulter = multer({dest: "./public/upload"});
 
-app.use(objMulter.any())/
+app.use(objMulter.any())
 
 app.use(express.static("./public"));
 
 app.post("/upload", (req,res) => {
     /* res.send("Respuesta del servidor") */
 
-    let oldName = req.files[0].path;// Obtener el nombre
+    // Obtener el nombre
+    let oldName = req.files[0].path;
     // Agrega el sufijo original al nuevo nombre
     let newName = req.files[0].path + path.parse(req.files[0].originalname).ext;
-    fs.renameSync(oldName, newName);// Cambiar el nombre del archivo
+    // Cambiar el nombre del archivo
+    fs.renameSync(oldName, newName);
     
     res.send({
       err: 0,
@@ -45,6 +49,5 @@ app.post("/upload", (req,res) => {
     });
   
 })
-
 
 app.listen(PORT, () => console.log('Servidor corriendo en el puerto ' + PORT))
