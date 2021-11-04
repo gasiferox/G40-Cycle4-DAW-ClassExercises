@@ -2,6 +2,11 @@
 
 ## <u>Nota para Clase 5</u>
 
+Dentro de la carpeta Clase_5 se debe instalar el `expres`.
+
+```
+npm i express
+```
 Cuando vayan a correr el código no olvidar instalar el `multer`.
 
 ```
