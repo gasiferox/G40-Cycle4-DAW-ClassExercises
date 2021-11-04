@@ -2,7 +2,7 @@
 
 ## <u>Nota para Clase 5</u>
 
-Dentro de la carpeta Clase_5 se debe instalar el `expres`.
+Dentro de la carpeta Clase_5 se debe instalar el `express`.
 
 ```
 npm i express
