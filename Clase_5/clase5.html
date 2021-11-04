@@ -1,11 +1,11 @@
 <html>
 
 <head>
-    <!-- Si esto se incluye se tienen comportamiento responsive -->
-    <!-- <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="clase5.js"></script>
+    <link rel="stylesheet" href="style.css">
     <h1>Ejemplo en clase</h1>
 </head>
 
@@ -32,6 +32,11 @@
 
     <form action="http://localhost:8000/upload" method="post" enctype="multipart/form-data">
         <input type="submit" value="submit">
+    </form>
+
+    <form action="http://localhost:8000/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="">
+        <input type="submit" value="subir">
     </form>
 
 </body>
