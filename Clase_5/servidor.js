@@ -10,7 +10,7 @@ const {createReadStream} = require('fs')
 
 //obtener resp
 app.get('/', (req, res) => {
-    res.writeHead(200, {'Content-Type': 'text/plain'})
+    res.writeHead(200, {'Content-Type': 'text/html'})
 
     createReadStream('Clase_5/clase5.html').pipe(res);
 
