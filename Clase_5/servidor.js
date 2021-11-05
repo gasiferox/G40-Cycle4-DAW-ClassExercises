@@ -10,7 +10,7 @@ const multer = require("multer")
 
 const path = require('path')
 
-const {createReadStream} = require('fs')
+/* const {createReadStream} = require('fs') */
 
 const HTML_CONTENT_TYPE = 'text/html'
 
@@ -20,7 +20,8 @@ app.get('/', (req, res) => {
     res.writeHead(200, {'Content-Type': HTML_CONTENT_TYPE})
 
     // Se envía el archivo html al server mediante un response
-    createReadStream('Clase_5/clase5.html').pipe(res);
+    fs.createReadStream('Clase_5/clase5.html').pipe(res);
+    // se elimina la línea 13 ya que el createReadStream hace parte del módulo fs
 
     /* res.end('Mensaje del servidor') */
 })
