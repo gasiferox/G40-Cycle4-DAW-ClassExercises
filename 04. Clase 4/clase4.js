@@ -16,7 +16,7 @@ window.onload = function () {
 
         getBandera(seleccionado)
 
-        validarCelular()
+        verificarCedula()
     })
 
     function getEstados(seleccionado) {
@@ -136,41 +136,93 @@ window.onload = function () {
         }
     }
 
-    document.getElementById("submit").addEventListener("click", () => {
+    document.getElementById("terms").addEventListener("change", e => {
+        if (e.target.checked) {
+            console.log("Términos aceptados")
+        } else {
+            console.log("Términos no aceptados")
+        }
+    })
+
+    function verificarCedula() {
+        var cedula = document.getElementById("cedula").value
+        var verificacionCedula = document.getElementById("verificacionCedula");
+        var expreNum = /^[0-9]{5,10}$/
+        var expreLetras = /[a-z]/
+
+        if (cedula.length == 0) {
+            verificacionCedula.innerHTML = "El campo no puede estar vacio"
+        } else {
+            if (expreNum.test(cedula)) {
+                verificacionCedula.innerHTML = ""
+                console.log("el numero de la cedula es " + cedula)
+            } else {
+                verificacionCedula.innerHTML = "El campo debe contener numeros minimo 5 máximo 10"
+            }
+            if (expreLetras.test(cedula)) {
+                verificacionCedula.innerHTML = ""
+                verificacionCedula.innerHTML = "El campo no puede contener letras"
+            }
+        }
+    }
+
+    document.getElementById("submit1").addEventListener("click", () => {
+        verificarCedula()
+    })
+
+    /* document.getElementById("submit").addEventListener("click", () => {
         var cedula = document.getElementById("cedula").value;
 
         if (cedula.length == 0) {
             var verificacionCedula = document.getElementById("verificacionCedula");
             verificacionCedula.innerHTML = "El campo no puede estar vacio"
-            /* alert("El campo no puede ir vacío"); */
+            // alert("El campo no puede ir vacío");
         }
         else {
-            /* verificacionCedula.innerHTML = "" */
+            // verificacionCedula.innerHTML = "" 
             console.log("El valor de la cedula es " + cedula);
         }
-    })
+    }) */
 
-    document.getElementById("employeed").addEventListener("change", e => {
-        if (e.target.checked) {
-            console.log("Esta empleado")
+    function verificarCelular() {
+        var celular = document.getElementById("celular").value
+        var verificacionCelular = document.getElementById("verificacionCelular");
+        var expreNum = /^[0-9]{10}$/
+        var expreLetras = /[a-z]/
+
+        if (celular.length == 0) {
+            verificacionCelular.innerHTML = "El campo no puede estar vacio"
         } else {
-            console.log("No esta empleado")
+            if (expreNum.test(celular)) {
+                verificacionCelular.innerHTML = ""
+                console.log("el numero de la celular es " + celular)
+            } else {
+                verificacionCelular.innerHTML = "El campo debe contener 10 números"
+            }
+            if (expreLetras.test(celular)) {
+                verificacionCelular.innerHTML = ""
+                verificacionCelular.innerHTML = "El campo no puede contener letras"
+            }
         }
-    })
+    }
 
     document.getElementById("submit2").addEventListener("click", () => {
+        verificarCelular()
+    })
+
+    /* document.getElementById("submit2").addEventListener("click", () => {
         var celular = document.getElementById("celular").value
-        var expression = /^[0-9]{3,5}$/  /* Expresión regular que toma solo numeros y minimo 3 maximo 5 */
+        var expression = /^[0-9]{3,5}$/  // Expresión regular que toma solo numeros y minimo 3 maximo 5
         var letras = /[a-z]/
 
         if (expression.test(celular)) {
             alert("El celular es " + celular)
-        } if (celular == ""){
+        } if (celular == "") {
             alert("Ingrese valores al campo")
         } if (letras.test(celular)) {
-            alert ("ingrese valores numéricos")
+            alert("ingrese valores numéricos")
         }
-    })
+    }) */
 
 
 }
