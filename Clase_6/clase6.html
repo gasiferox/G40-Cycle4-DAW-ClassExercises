@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="clase5.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <h1>Ejemplo en clase</h1>
+</head>
+
+<body>
+    <!-- <form name="formulario1" id="formulario1"> -->
+        <label for="inicio">Inicio</label>
+        <br>
+        <input type="text" name="inicio" id="inicio">
+        <br><br>
+        <label for="final">Final</label>
+        <br>
+        <input type="text" name="final" id="final">
+        <br><br>
+        <button id="ejecutar" name="ejecutar">Ejecutar</button>
+        <br><br>
+        <label for="generado">Previsualizar sentencia</label>
+        <br>
+        <textarea name="generado" id="generado" cols="60" rows="10" readonly></textarea>
+        <br><br>
+        <label for="generado2">Previsualizar sentencia 2</label>
+        <br>
+        <textarea name="generado2" id="generado2" cols="60" rows="10" readonly></textarea>
+    <!-- </form> -->
+
+    <form action="http://localhost:8000/upload" method="post" enctype="multipart/form-data">
+        <input type="submit" value="submit">
+    </form>
+
+    <form action="http://localhost:8000/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="">
+        <input type="submit" value="subir">
+    </form>
+
+</body>
+
+</html>
