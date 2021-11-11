@@ -12,3 +12,12 @@ Cuando vayan a correr el código no olvidar instalar el `multer`.
 ```
 npm i multer --save
 ```
+Nota: el `--save` es opcional ya que en las versiones nuevas del node se toma por default.
+
+## <u>Nota para Clase 7 - 10NOV21</u>
+
+Se debe cargar el mongoose por medio de la consola
+
+```
+npm i mongoose
+```
