@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="AppClase9" id="AppClase9">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba Clase 9 - 16NOV21</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="./main.js"></script>
+
+</head>
+
+<body ng-controller="controlador">
+
+    {{resultado}}
+
+    <input type="text" class="form-control input-lg text-center" placeholder="Inserta valor 1" id="numero1" ng-model="formData.numero1">
+
+    <input type="text" class="form-control input-lg text-center" placeholder="Inserta valor 2" id="numero2" ng-model="formData.numero2">
+
+    <button class="btn btn-primary btn-lg" ng-click="calcular()">Multiplicación</button>
+
+
+
+
+    
+</body>
+
+</html>
