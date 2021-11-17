@@ -21,3 +21,11 @@ Se debe cargar el mongoose por medio de la consola
 ```
 npm i mongoose
 ```
+
+## <u>Nota para Clase 9 - 16NOV21</u>
+
+Cargar los paquetes del servidor, dentro de la carpeta server, ejecutando el siguiente comando desde la terminal
+
+```
+npm i
+```
